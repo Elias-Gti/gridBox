@@ -1,0 +1,341 @@
+/* UTILITIES */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto+Slab:wght@700&family=Secular+One&display=swap');
+
+* {
+
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+body {
+
+    font-family: Roboto, arial, helvetica, sans-serif;
+
+}
+
+.fa-grip{
+    color: white;
+    font-size: 28px;
+}
+
+
+a {
+
+    text-decoration: none;
+
+}
+
+li {
+
+    list-style: none;
+
+}
+
+/* NAVBAR STYLING STARTS */
+
+.navbar {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    padding: 20px;
+
+    background-color: #111133;
+
+    color: #fff;
+
+}
+
+.nav-links a {
+
+    color: #fff;
+
+}
+
+/* LOGO */
+
+.logo {
+
+    font-size: 28px;
+    font-weight: 700;
+    color: rgba(255, 255, 255, );
+    font-family: "Roboto Slab", arial, helvetica, sans-serif;
+
+}
+
+/* NAVBAR MENU */
+
+.menu {
+
+    display: flex;
+    gap: 1em;
+    font-size: 18px;
+
+}
+
+.menu li:hover {
+
+    background-color: #111133;
+
+    border-radius: 5px;
+
+    transition: 0.3s ease;
+
+}
+
+.menu li {
+
+    padding: 5px 14px;
+
+}
+
+/* DROPDOWN MENU */
+
+.services {
+
+    position: relative;
+
+}
+
+.dropdown {
+
+    background-color: #111133;
+    padding: 1em 0;
+    position: absolute;
+    /*WITH RESPECT TO PARENT*/
+    display: none;
+    border-radius: 8px;
+    top: 35px;
+
+}
+
+.dropdown li+li {
+    margin-top: 10px;
+
+}
+
+.dropdown li {
+
+    padding: 0.5em 1em;
+
+    width: 8em;
+
+    text-align: center;
+
+}
+
+.dropdown li:hover {
+
+    background-color: #111133;
+
+}
+
+.services:hover .dropdown {
+
+    display: block;
+
+}
+
+/*RESPONSIVE NAVBAR MENU STARTS*/
+
+/* CHECKBOX HACK */
+
+input[type=checkbox] {
+    display: none;
+
+}
+
+/*HAMBURGER MENU*/
+
+.hamburger {
+
+    display: none;
+    font-size: 24px;
+    user-select: none;
+
+}
+
+/* start Card section */
+
+
+
+.section-card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    margin-top: 20px;
+    background-color: #f7f8fc;
+    font-family: "Roboto", sans-serif;
+    color: #10182f;
+}
+
+.card-container {
+    display: flex;
+    width: 1200px;
+    gap: 20px;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.card {
+    margin: 10px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    max-width: 360px;
+}
+
+.card-header img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 20px;
+    min-height: 200px;
+}
+.card-body h2{
+    font-family:  "Roboto Slab", arial, helvetica, sans-serif;
+    font-weight: 700;
+    font-size: 20px;
+}
+
+.card-body .text-description {
+    font-size: 13px;
+    margin: 0 0 40px;
+}
+.card-body .meute-text {
+    font-size: 13px;
+    margin: 10px 0 10px 0;
+}
+
+
+.meute-text{
+    margin: 0.25em 0 0; 
+    font-size: 16px;
+    font-size: 1rem;
+    margin-bottom: 0.5em;
+    font-size: 14px;
+    color: #999;    
+    font-size: .875rem;
+}
+.btn{
+    display: inline-block;   
+    padding: 0.6em 0.8em;
+    background-color: #113;    
+    color: #fff;    
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 700;  
+    font-size: .875rem;
+    border: none;
+}
+.btn:hover{
+    display: inline-block;   
+    padding: 0.6em 0.8em;
+    background-color: #0693e3;    
+    color: #fff;    
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 700;  
+    font-size: .875rem;
+    border: none;
+}
+
+footer{
+    background-color: #10182f;
+    color: #fff;
+}
+footer p {
+    text-align: center;
+    font-size: 14px;
+    color: white;
+    padding: 20px 0 20px 0;
+    margin-top: 20px;
+    
+}
+
+
+
+
+
+
+/* APPLYING MEDIA QUERIES */
+
+@media (max-width: 768px) {
+
+    .menu {
+
+        display: none;
+
+        position: absolute;
+
+        background-color: #111133;
+
+        right: 0;
+
+        left: 0;
+
+        text-align: center;
+
+        padding: 16px 0;
+
+    }
+
+    .menu li:hover {
+
+        display: inline-block;
+
+        background-color: #111133;
+
+        transition: 0.3s ease;
+
+    }
+
+    .menu li+li {
+
+        margin-top: 12px;
+
+    }
+
+    input[type=checkbox]:checked~.menu {
+
+        display: block;
+
+    }
+
+    .hamburger {
+
+        display: block;
+
+    }
+
+    .dropdown {
+
+        left: 50%;
+
+        top: 30px;
+
+        transform: translateX(35%);
+
+    }
+
+    .dropdown li:hover {
+
+        background-color: #111133;
+
+    }
+
+}
